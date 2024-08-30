@@ -1,0 +1,1372 @@
+*
+{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body
+{
+    overflow-x: hidden;
+}
+.menu
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .3s ease-in-out;
+    padding: 2pc 2pc;
+    box-shadow: 2px 5px 16px rgb(212, 211, 209);
+}
+.menu:hover
+{
+    box-shadow: 2px 10px 20px rgb(212, 211, 209);
+}
+#open
+{
+    display: none;
+}
+.menu .logo
+{
+    height: 100%;
+    padding: 1pc;
+    cursor: pointer;
+    color: #191919;
+    border-radius: 1pc;
+    text-transform: uppercase;
+    border-bottom: 2px double skyblue;
+}
+.menu ul
+{
+    cursor: pointer;
+    list-style-type: none;
+    display: flex;
+    gap: 1pc;
+}
+.menu ul span
+{
+    display: none;
+}
+.menu ul li a:any-link
+{
+    cursor: pointer;
+    font-size: 1.3rem;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.menu ul li a::after
+{
+    content: "";
+    width: 0%;
+    height: 3px;
+    margin: auto;
+    display: block;
+    transition: .3s ease-in-out;
+}
+.menu ul li a:hover::after
+{
+    width: 100%;
+    background-color: gray;
+}
+
+/* Start section one element  */
+main
+{
+    height: 100vh;
+    margin-top: 2pc;
+    background-image:linear-gradient(to bottom, hsla(180, 100%, 50%, .3), hsla(182, 98%, 51%, 0.1)), url("../images/kebbi-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    object-position: top;
+    position: relative;
+}
+#datetime
+{
+    color: red;
+    position: fixed;
+    right: 0;
+    top: 20%;
+    font-size: 1.2rem;
+    padding: 1pc 1.5pc;
+    border-radius: 1rem 0 0 1rem;
+    background-color: aliceblue;
+    z-index: 3;
+}
+main h1
+{
+    color: #191919;
+    font-size: 1.8pc;
+    text-align: center;
+    text-transform: capitalize;
+}
+main h1 .shadow
+{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .4s ease-in-out;
+    background-color: transparent;
+}
+main h1 .shadow:hover
+{
+    cursor: pointer;
+    background-color: hsla(180, 42%, 53%, 0.2);
+}
+main h1 .shadow h2
+{
+    width: 100%;
+    height: 100%;
+    font-size: 2pc;
+    color: rgb(47, 53, 59);
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    opacity: .7;
+    transform: translateX(-50%);
+    transition: .3s ease-in-out;
+}
+main h1 .shadow:hover h2
+{
+    top: 40%;
+    opacity: 1;
+    color: white;
+    text-shadow: 2px 2px 10px blue;
+}
+main h1 .shadow h2 b
+{
+    white-space: nowrap;
+}
+#info
+{
+    color: gray;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    padding-inline: 1.5pc;
+    text-transform: lowercase;
+}
+#info .capitalize
+{
+    text-transform: capitalize;
+}
+[data="meta"]
+{
+    font-weight: 600;
+    text-transform: capitalize;
+}
+/* ending table  */
+table
+{
+    color: rgb(12, 8, 8);
+    width: 50%;
+    font-size: 1.2pc;
+
+    position: absolute;
+    right: 2%;
+    top: 47%;
+    border-radius: 1pc;
+    background-color: rgb(198, 202, 206);
+}
+table .middle
+{
+    padding: 1pc;
+    text-align: center;
+    background-color: hsla(0, 0%, 100%, 0.5);
+}
+table th
+{
+    padding: .5pc;
+    text-align: left;
+    border-radius: 1pc;
+}
+table td
+{
+    text-align: left;
+    border: none;
+    padding-left: 2pc;
+    padding-bottom: 1pc;
+}
+.iata, .icad
+{
+    color: blue;
+    cursor: pointer;
+    font-size: 1pc;
+}
+.iata:hover, .icad:hover
+{
+    color: rgb(27, 27, 87);
+    cursor: pointer;
+}
+
+/* ending  */
+section .wrapper_el
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-block: 5pc;
+}
+section .wrapper_el .box
+{
+    flex-basis: 50%;
+}
+section .wrapper_el .box h2
+{
+    font-size: 1.5pc;
+    text-align: left;
+    padding: 0 .7pc;
+    margin-inline: 1.5pc;
+    text-transform: capitalize;
+}
+section .wrapper_el .box p
+{
+    font-size: 1pc;
+    text-align: justify;
+    text-transform: capitalize;
+    color: #191919;
+    margin-top: 1%;
+}
+section .wrapper_el .box img
+{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+section .wrapper_el .box:last-child img
+{
+    order: -1;
+}
+.g_image
+{
+    border-radius: .5pc;
+    border: 2px solid wheat;
+}
+#governor
+{
+    position: relative;
+}
+.governor_name
+{
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    color: white;
+    font-size: 1rem;
+    border-radius: .5pc;
+    text-align: center;
+    padding-block: .3pc;
+    background-color: hsla(0, 0%, 10%, .5);
+}
+
+/* End section one element  */
+.service
+{
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-block: 5pc;
+    padding-inline: 1pc;
+    background-color: aliceblue;
+}
+.service .box
+{
+    flex-basis: 50%;
+}
+.service .box img
+{
+    width: 100%;
+    height: 30%;
+    display: block;
+    border-radius: .7pc;
+    box-sizing: border-box;
+}
+
+.service .box h2
+{
+    padding: .7pc;
+    font-size: 1.5pc;
+    text-align: left;
+    color: #191919;
+    text-transform: capitalize;
+}
+.service .box p
+{
+    padding: .7pc;
+    font-size: 1pc;
+    text-align: left;
+    color: #191919;
+}
+.service .vfr-chart, .service.box
+{
+    flex-basis: 100%;
+}
+.service .vfr-chart
+{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 50%;
+}
+.service .vfr-chart .dnbk
+{
+    display: flex;
+    flex-direction: column;
+}
+.service .vfr-chart .dnbk label
+{
+    padding: .5rem;
+    color: white;
+    text-align: center;
+    background-color: #191919;
+}
+.service .vfr-chart .dnbk img
+{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+/* ending code  */
+.hotel
+{
+    height: 400px;
+
+    text-align: justify;
+    margin-block: 5pc;
+    padding: 2pc 1pc;
+}
+.img_float img
+{
+    float: right;
+    width: 50%;
+    height: 360px;
+    margin-left: 1pc;
+    border-radius: .5pc;
+    box-sizing: border-box;
+
+    object-fit: cover;
+}
+.text
+{
+    line-height: 1.2;
+}
+.text h4
+{
+    font-size: 1.5pc;
+    line-height: 1.2;
+    text-align: center;
+}
+.text h4 span
+{
+    font-size: 1pc;
+    text-align: center;
+    color: rgb(77, 74, 74);
+}
+.text p
+{
+    padding: .5pc;
+    font-size: 1.2pc;
+    color: rgb(90, 87, 87);
+}
+/* ending code  */
+.fireservice_office
+{
+    height: 40dvh;
+    display: flex;
+    column-gap: 2pc;
+    padding-inline: 1pc;
+    padding-block: 1pc 5rem;
+}
+.fireservice_office .fireservice_house
+{
+    flex-basis: 40%;
+    border-radius: 4%;
+}
+.fireservice_office figure img
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.fireservice_office figcaption
+{
+    color: #191919;
+    font-size: 1.5rem;
+    text-align: left;
+    font-weight: bold;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+}
+.office
+{
+    flex-basis: 90%;
+    display: grid;
+    grid-template-columns: .6fr 1fr;
+    gap: 2pc;
+    padding: 1pc;
+    align-items: center;
+}
+.office img
+{
+    width: 100%;
+    height: 150px;
+    border-radius: 10%;
+    object-fit: cover;
+}
+.office ul
+{
+    font-size: 1.1rem;
+    list-style: decimal;
+    line-height: 1.9;
+    margin-left: 0;
+}
+/* ending code  */
+.kerojet
+{
+    display: grid;
+    gap: .5pc;
+    padding:.7pc .4rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+.kerojet .box img
+{
+    width: 100%;
+    height: 100;
+    display: block;
+    border-radius: 1pc;
+    transition: .4s ease-in-out;
+}
+.kerojet .box img:hover
+{
+    cursor: pointer;
+    filter: drop-shadow(2px 2px 3px blue);
+}
+/* ending code  */
+.tower
+{
+    display: flex;
+    gap: 1pc;
+    align-items: center;
+    margin-block: 2pc;
+    padding:2pc 1pc;
+}
+.tower img
+{
+    width: 25%;
+    height: auto;
+    order: 2;
+    border-radius: .5pc;
+    filter: drop-shadow(1px 1px 3px);
+}
+.tower p
+{
+    width: 90%;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    text-align: justify;
+}
+.tower p span
+{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+/* ending code  */
+.location
+{
+    line-height: 2pc;
+    display: grid;
+    align-items: center;
+    padding-inline: 2pc 1pc;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: aliceblue;
+}
+.contactform
+{
+    border:none;
+}
+.contactform form
+{
+    padding: 1pc 2pc;
+}
+.contactform form label
+{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+.contactform form input
+{
+    width: 100%;
+    padding: .7pc;
+    outline: none;
+    font-size: 1.3pc;
+    border-radius: .4rem;
+    margin-bottom: .6rem;
+    border: 1px solid rgb(47, 53, 59);
+    font-family: 'Courier New', Courier, monospace;
+}
+.contactform form textarea
+{
+    width: 100%;
+    height: 10rem;
+    padding: .9pc;
+    resize: none;
+    outline: none;
+    font-size: 1.3pc;
+    border-radius: .4rem;
+    margin-bottom: .6rem;
+    border: 1px solid rgb(47, 53, 59);
+}
+.contactform form input[type="submit"]
+{
+    width: 50%;
+    border: none;
+    padding: .9pc;
+    color: #ffffff;
+    border-radius: .7rem;
+    transition: .3s ease-in-out;
+    text-transform: capitalize;
+    background-color: rgb(77, 88, 99);
+}
+.contactform form input[type="submit"]:hover
+{
+    cursor: pointer;
+    background-color: rgba(77, 88, 99, .5);
+}
+.location h2
+{
+    font-size: 1.5rem;
+    color: #5a5858;
+    margin-bottom: .3rem;
+    text-transform: capitalize;
+    transform: scaleY(1.5);
+}
+.location p
+{
+    color: #191919;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+.location a
+{
+    color: blue;
+    display: block;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+.location a:hover,
+.location a:hover
+{
+    color: darkblue;
+    text-decoration: underline;
+}
+.home
+{
+    position: fixed;
+    bottom: 3%;
+    left: 90%;
+    padding: 1pc;
+    z-index: 1;
+    font-size: 2pc;
+    color: #ffffff;
+    border-radius: 50%;
+    text-decoration: none;
+    transform: rotate(-2deg);
+    transition: .3s ease-in-out;
+    background-color: rgb(43, 31, 31);
+}
+.home:hover
+{
+    color: #ffffff;
+    background-color: rgb(77, 30, 30);
+    transform: rotate(-90deg);
+}
+/* ending contact form  */
+.about_page
+{
+    padding: 1.5pc 2pc;
+    margin-block: 2pc;
+}
+.about_page h6
+{
+    font-size: 1.5rem;
+}
+.about_page p
+{
+    width: 50%;
+    padding: 1rem 0;
+    line-height: 1.3;
+    font-size: 1.2rem;
+    color: rgb(138, 131, 131);
+    transition: .3s ease-in-out;
+}
+.about_page p:hover
+{
+    transform: translateY(-15px);
+}
+/* ending code  */
+footer
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+footer p
+{
+    font-size: 1.3rem;
+    color: #191919;
+    padding: 2pc;
+}
+.social_link
+{
+    padding-left: 10%;
+}
+.social_link i
+{
+    margin: .5pc;
+    padding: .7pc;
+    border-radius: 50%;
+    border: 2px solid steelblue;
+    font-size: clamp(1pc, 3vw, 1.5rem);
+}
+.social_link i:hover
+{
+    padding: .7pc;
+    color: orange;
+    cursor: pointer;
+    border: 2px solid peru;
+}
+.social_link .ri-arrow-left-up-line
+{
+    position: absolute;
+    right: 3%;
+    transition: .3s ease-in-out;
+    transform: translateY(-300px);
+    transform: rotate(-45deg);
+}
+.social_link .ri-arrow-left-up-line:hover
+{
+    background-color: aliceblue;
+    transform: rotate(45deg);
+}
+/* media qery  */
+@media screen and (max-width: 767.99px) {
+    body 
+    {
+        width: 100dvw;
+        height: 100dvh;
+    }
+    #open
+{
+    padding: .4pc;
+    font-size: 2pc;
+    cursor: pointer;
+    color: whitesmoke;
+    border-radius: 4pc;
+    background-color: lightblue;
+    border: 2px solid transparent;
+
+    display: block;
+}
+#open:hover
+{
+    cursor: pointer;
+    color: #ffffff;
+    border: 2px solid wheat;
+    background-color: rgb(50, 66, 71);
+}
+    .menu
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .3s ease-in-out;
+    padding: 2pc 2pc;
+    box-shadow: 2px 5px 16px rgb(212, 211, 209);  
+}
+.menu:hover
+{
+    box-shadow: 2px 10px 20px rgb(212, 211, 209);
+}
+.menu .logo
+{
+    height: 100%;
+    padding: .7pc;
+    font-size: .7rem;
+    border-radius: 1pc;
+    color: #191919;
+    text-transform: uppercase;
+    border-bottom: 2px double skyblue;
+}
+.menu ul
+{
+    cursor: pointer;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background-color: peru;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100%;
+    z-index: 1;
+    padding-top: 2.9pc;
+    transition: .3s ease-in-out;
+}
+.menu ul span
+{
+    font-size: 1.3pc;
+    position: absolute;
+    top: 0;
+    padding: .5pc;
+    width: 100%;
+    color: white;
+    text-align: center;
+    background-color: rgb(114, 26, 26);
+    display: block;
+}
+.menu ul span:hover
+{
+    color: red;
+    font-size: 1.5pc;
+
+    position: absolute;
+    top: 0;
+    padding: .5pc;
+    width: 100%;
+    color: white;
+    text-align: center;
+    background-color: red;
+}
+.menu ul li
+{
+    font-size: .1pc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #191919;
+    display: inline-block;
+    padding: 1pc;
+}
+.menu ul li:hover
+{
+    color: white;
+    background-color: #5a5858;
+}
+.menu ul li a:any-link
+{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 0;
+    color: wheat;
+    text-decoration: none;
+    text-transform: capitalize;
+    display: inline-block;
+}
+.menu ul li a:any-link::after
+{
+    content: "";
+    width: 0%;
+    height: 3px;
+    margin: auto;
+    display: none;
+    transition: .3s ease-in-out;
+}
+.menu ul li a:hover::after
+{
+    width: 100%;
+    display: none;
+    background-color: gray;
+}
+/* end menu style  */
+main
+{
+    height: 100vh;
+    background-image:linear-gradient(to bottom, hsla(180, 100%, 50%, .3), hsla(182, 98%, 51%, 0.1)), url("../images/kebbi-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    object-position: top;
+    position: relative;
+    padding-bottom: 2pc;
+}
+main h1
+{
+    color: #191919;
+    font-size: clamp(1pc, 3vh, 2pc);
+    text-align: center;
+    text-transform: capitalize;
+}
+main h1 .shadow
+{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .4s ease-in-out;
+    background-color: transparent;
+}
+main h1 .shadow:hover
+{
+    cursor: pointer;
+    background-color: hsla(180, 42%, 53%, 0.2);
+}
+main h1 .shadow h2
+{
+    width: 100%;
+    height: 100%;
+    font-size: 1.7pc;
+    color: rgb(47, 53, 59);
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    opacity: .7;
+    transform: translateX(-50%);
+    transition: .3s ease-in-out;
+}
+main h1 .shadow:hover h2
+{
+    top: 25%;
+    opacity: 1;
+    color: white;
+    text-shadow: 2px 2px 10px blue;
+}
+main h1 .shadow h2 b
+{
+    white-space: nowrap;
+}
+/* ending table  */
+table
+{
+    color: rgb(12, 8, 8);
+    width: 90%;
+    font-size: 1pc;
+
+    position: absolute;
+    right: 2%;
+    top: 47%;
+    border-radius: 1pc;
+    background-color: rgb(198, 202, 206);
+}
+table .middle
+{
+    padding: .8pc;
+    font-size: 14px;
+    text-align: center;
+    background-color: hsla(0, 0%, 100%, 0.5);
+}
+table th
+{
+    padding: .5pc;
+    font-size: 13px;
+    text-align: left;
+    border-radius: .7pc;
+}
+table td
+{
+    text-align: left;
+    border: none;
+    padding-left: 2pc;
+    padding-bottom: 1pc;
+}
+.iata, .icad
+{
+    color: blue;
+    cursor: pointer;
+    font-size: 13px;
+}
+.iata:hover, .icad:hover
+{
+    color: rgb(27, 27, 87);
+    cursor: pointer;
+}
+/* ending  */
+
+section .wrapper_el
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2pc;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2.5pc;
+    padding-inline: 1pc;
+}
+section .wrapper_el .box
+{
+    flex-basis: 50%;
+}
+.wrapper_el .box #info
+{
+    color: gray;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding-inline: 0pc;
+    text-align: justify;
+    text-transform: lowercase;
+}
+.wrapper_el .box  #info .capitalize
+{
+    text-transform: capitalize;
+}
+.wrapper_el .box  [data="meta"]
+{
+    font-weight: 600;
+    text-transform: capitalize;
+}
+section .wrapper_el .box h2
+{
+    width: 100%;
+    margin: 0pc;
+    padding-inline: 1.2pc;
+    color: #191919;
+    font-size: 1.2pc;
+    text-align: center;
+    text-transform: capitalize;
+}
+section .wrapper_el .box p
+{
+    padding: .7pc;
+    font-size: 1.1pc;
+    text-align: center;
+    line-height: 1.4;
+    text-transform: capitalize;
+    color: #191919;
+}
+section .wrapper_el .box img
+{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 0 0 .3pc .3pc;
+    transition: .3s ease-in-out;
+    box-shadow: 3px 2px 4px black;
+}
+
+section .wrapper_el .box img:hover
+{
+    width: 100%;
+    height: 100%;
+    display: block;
+    box-shadow: 4px 4px 5px black;
+}
+section .wrapper_el .box:last-child img
+{
+    order: -1;
+}
+.g_image
+{
+    border-radius: .5pc;
+    border: 2px solid wheat;
+}
+#governor
+{
+    width: 100%;
+    position: relative;
+}
+.governor_name
+{
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    color: white;
+    font-size: .8rem;
+    border-radius: .5pc;
+    text-align: center;
+    padding-block: .3pc;
+    background-color: hsla(0, 0%, 10%, .5);
+}
+
+/* End section one element  */
+.service
+{
+    display: grid;
+    align-content: center;
+    row-gap: 2pc;
+    height: fit-content;
+    grid-auto-flow: row;
+    margin-block: 2pc;
+    padding-inline: .8pc;
+    padding-bottom: 0pc;
+}
+.service .box:first-child
+{
+    order: 1;
+}
+.service .box img
+{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.service .box h2
+{
+    padding: .7pc;
+    font-size: 1.5pc;
+    text-align: center;
+    text-transform: capitalize;
+    color: #191919;
+}
+.service .box p
+{
+    padding: .7pc;
+    font-size: 1pc;
+    line-height: 1.4;
+    text-align: center;
+    text-transform: capitalize;
+    color: #191919;
+}
+.service img 
+{
+    border-radius: .3pc;
+    transition: .3s ease-in-out;
+    box-shadow: 3px 2px 4px black;
+}
+.service img:hover
+{
+    box-shadow: 4px 4px 5px black;
+}
+section .wrapper_el .box img:hover
+{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: .3pc;
+    box-shadow: 3px 3px 4px black;
+}
+.service .vfr-chart, .service.box
+{
+    flex-basis: 100%;
+}
+.service .vfr-chart
+{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    flex-basis: 50%;
+}
+.service .vfr-chart .dnbk
+{
+    display: flex;
+    width: 150px;
+    flex-direction: column;
+}
+.service .vfr-chart .dnbk label
+{
+    width: 100%;
+    padding: .5rem;
+    color: white;
+    text-align: center;
+    background-color: #191919;
+}
+.service .vfr-chart .dnbk img
+{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+/* ending code  */
+.hotel
+{
+
+    height: auto;
+
+    text-align: justify;
+    margin-block: 5pc;
+    padding-inline: 1pc;
+    
+
+    display: flex;
+    gap: 3pc;
+    flex-direction: column;
+}
+.img_float img
+{
+    float: center;
+    width: 100%;
+    height: 350px;
+    margin-left: 1pc;
+    border-radius: .5pc;
+
+    object-fit: cover;
+}
+.text
+{
+    line-height: 1.2;
+}
+.text h4
+{
+    font-size: 1.5pc;
+    line-height: 1;
+    text-align: center;
+}
+.text h4 span
+{
+    font-size: 1pc;
+    text-align: center;
+    color: rgb(77, 74, 74);
+}
+.text p
+{
+    padding: .5pc;
+    font-size: 1pc;
+    color: rgb(90, 87, 87);
+}
+/* ending code  */
+.fireservice_office
+{
+    display: flex;
+    flex-direction: column;
+    gap: 4pc;
+    height: max-content;
+}
+.fireservice_office figcaption
+{
+    padding: 0;
+}
+.fireservice_office .fireservice_house
+{
+    flex-basis: 100%;
+}
+
+.office
+{
+    flex-basis: 100%;
+    display: grid;
+    grid-template-columns: .3fr 1fr;
+    gap: 1pc;
+    padding: 1pc 0pc;
+    align-items: start;
+}
+.office img
+{
+    width: 100%;
+    height: 120px;
+    border-radius: 10%;
+    object-fit: cover;
+}
+.office ul
+{
+    font-size: 1rem;
+    list-style: decimal;
+    line-height: 1.3;
+    margin-left: 0;
+}
+/* ending code  */
+.tower
+{
+    display: flex;
+    gap: 1pc;
+    align-items: center;
+    flex-direction: column-reverse;
+    margin-block: 0 2pc;
+    padding-inline: 1pc;
+}
+.tower img
+{
+    width: 100%;
+    height: auto;
+    order: 2;
+    border-radius: .5pc;
+}
+.tower p
+{
+    width: 100%;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    color: rgb(138, 131, 131);
+}
+.tower p span
+{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(25, 25, 25);
+}
+/* ending tower code  */
+.location
+{
+    line-height: 2pc;
+    display: grid;
+    align-items: center;
+    padding: 2pc 1pc;
+    background-color: aliceblue;
+    grid-template-columns: repeat(1, 1fr);
+}
+.location h2
+{
+    font-size: 1.5rem;
+    color: #5a5858;
+    margin-bottom: 0;
+    text-transform: capitalize;
+    transform: scaleY(0.9);
+}
+.location p
+{
+    font-size: 1rem;
+    color: #191919;
+    text-transform: capitalize;
+}
+.location a
+{
+    display: block;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: rgb(25, 25, 177);
+}
+.location a:hover,
+.location a:hover
+{
+    color: darkblue;
+    text-decoration: underline;
+}
+.contactform
+{
+    border:none;
+}
+.contactform form
+{
+    padding: 1pc 0pc;
+}
+.contactform form label
+{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+.contactform form input
+{
+    width: 100%;
+    padding: .7pc;
+    outline: none;
+    font-size: 1.3pc;
+    border-radius: .4rem;
+    margin-bottom: .6rem;
+    border: 1px solid rgb(47, 53, 59);
+}
+.contactform form textarea
+{
+    width: 100%;
+    height: 10rem;
+    padding: .9pc;
+    resize: none;
+    outline: none;
+    font-size: 1.3pc;
+    border-radius: .4rem;
+    margin-bottom: .6rem;
+    border: 1px solid rgb(47, 53, 59);
+}
+.contactform form input[type="submit"]
+{
+    width: 100%;
+    border: none;
+    padding: .9pc;
+    color: #ffffff;
+    border-radius: .7rem;
+    transition: .3s ease-in-out;
+    text-transform: capitalize;
+    background-color: rgb(77, 88, 99);
+}
+.contactform form input[type="submit"]:hover
+{
+    cursor: pointer;
+    background-color: rgba(77, 88, 99, .5);
+}
+/* ending contact form  */
+.about_page
+{
+    padding: 1.5pc 1.5pc;
+    margin-block: 2pc;
+    box-shadow: 1px 2px 3px blue;
+}
+.about_page h6
+{
+    font-size: 1.5rem;
+}
+.about_page p
+{
+    width: 100%;
+    padding: 1rem 0;
+    line-height: 1.3;
+    font-size: .9rem;
+    text-align: justify;
+    color: rgb(138, 131, 131);
+    transition: .3s ease-in-out;
+}
+.about_page p:hover
+{
+    transform: translateY(-10px);
+}
+/* ending code  */
+footer
+{
+    display: flex;
+    padding: 2pc;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+footer p
+{
+    font-size: 1.3rem;
+    color: #191919;
+}
+.social_link
+{
+    padding-left: 0;
+    display: flex;
+}
+.social_link a
+{
+    text-decoration: none;
+}
+.social_link i
+{
+    margin: .5pc;
+    padding: .7pc;
+    border-radius: 50%;
+    border: 2px solid steelblue;
+    font-size: clamp(1pc, 3vw, 1.5rem);
+}
+.social_link i:hover
+{
+    color: orange;
+    cursor: pointer;
+    border: 2px solid peru;
+}
+.social_link .ri-arrow-left-up-line
+{
+    position: absolute;
+    right: 3%;
+    color: white;
+    transition: .3s ease-in-out;
+    transform: translateY(400px);
+    transform: rotate(-45deg);
+    border: 2px solid blue;
+    background-color: #5a5858;
+}
+.social_link .ri-arrow-left-up-line:hover
+{
+    color: wheat;
+    transform: rotate(45deg);
+    background-color: #5a5858;
+}
+
+}
