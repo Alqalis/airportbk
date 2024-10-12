@@ -1,0 +1,733 @@
+/* STARTING DESKTOP STYLE */
+.menu
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .3s ease-in-out;
+    padding: 2pc 2pc;
+    box-shadow: 2px 5px 16px rgb(212, 211, 209);
+    font-family: "Mingzat", sans-serif;
+}
+.menu:hover
+{
+    box-shadow: 2px 10px 20px rgb(212, 211, 209);
+}
+#open
+{
+    display: none;
+}
+.menu .logo
+{
+    height: 100%;
+    padding: 1pc;
+    cursor: pointer;
+    color: #191919;
+    font-weight: 700;
+    border-radius: 1pc;
+    text-transform: uppercase;
+    background-color: rgb(255, 255, 255);
+}
+.menu ul
+{
+    cursor: pointer;
+    list-style-type: none;
+    display: flex;
+    gap: 1pc;
+}
+.menu ul span
+{
+    display: none;
+}
+.menu ul li a:any-link
+{
+    cursor: pointer;
+    color: #191919;
+    font-size: 1.1rem;
+    font-weight: 499;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.menu ul li a::after
+{
+    content: "";
+    width: 0%;
+    height: 3px;
+    margin: auto;
+    display: block;
+    transition: .3s ease-in-out;
+}
+.menu ul li a:hover::after
+{
+    width: 100%;
+    background-color: gray;
+}
+
+/* Start section one element  */
+main
+{
+    height: 100vh;
+    margin-top: 2pc;
+    background-image:linear-gradient(to bottom, hsla(180, 100%, 50%, .3), hsla(182, 98%, 51%, 0.1)), url("../images/kebbi-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    object-position: top;
+    position: relative;
+}
+#datetime
+{
+    color: #191919;
+    position: fixed;
+    right: 0;
+    top: 20%;
+    font-size: 1.2rem;
+    padding: 1pc 1.5pc;
+    border-radius: 1rem 0 0 1rem;
+    background-color: aliceblue;
+    z-index: 3;
+}
+main h1
+{
+    color: #191919;
+    font-size: 1.8pc;
+    text-align: center;
+    text-transform: capitalize;
+}
+main h1 .shadow
+{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .4s ease-in-out;
+    background-color: transparent;
+}
+main h1 .shadow:hover
+{
+    cursor: pointer;
+    background-color: hsla(180, 42%, 53%, 0.3);
+}
+main h1 .shadow h2
+{
+    width: 100%;
+    height: 100%;
+    font-size: 2pc;
+    color: rgb(47, 53, 59);
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    opacity: .7;
+    transform: translateX(-50%);
+    transition: .3s ease-in-out;
+}
+main h1 .shadow:hover h2
+{
+    top: 40%;
+    opacity: 1;
+    color: white;
+    text-shadow: 2px 2px 10px blue;
+}
+main h1 .shadow h2 b
+{
+    white-space: nowrap;
+}
+#info
+{
+    color: gray;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    padding-inline: 1.5pc;
+    text-transform: lowercase;
+}
+#info .capitalize
+{
+    text-transform: capitalize;
+}
+[data="meta"]
+{
+    font-weight: 600;
+    text-transform: capitalize;
+}
+/* ending table  */
+table
+{
+    color: rgb(12, 8, 8);
+    width: 50%;
+    font-size: 1.2pc;
+
+    position: absolute;
+    right: 2%;
+    top: 47%;
+    border-radius: 1pc;
+    background-color: rgb(198, 202, 206);
+}
+table .middle
+{
+    text-align: center;
+}
+table #mddle
+{
+    padding: .2pc;
+    text-align: center;
+    transition: .3s ease-in-out;
+}
+table #mddle:hover
+{
+    cursor: pointer;
+    background-color: hsla(0, 0%, 100%, 0.3);
+}
+table th
+{
+    padding: .5pc;
+    text-align: left;
+}
+table td
+{
+    text-align: left;
+    border: none;
+    padding-left: 2pc;
+    padding-bottom: 1pc;
+}
+.iata, .icad
+{
+    cursor: pointer;
+    font-size: .8pc;
+    padding: 1rem;
+    font-weight: 500;
+    text-align: justify;
+}
+.icad
+{
+    padding: 1rem;
+}
+.iata summary, .icad summary
+{
+    color: #fff;
+    padding: .3rem .5rem;
+    border-radius: .5rem;
+    background-color: #191919;
+}
+.iata:hover, .icad:hover
+{
+    color: rgb(27, 27, 87);
+    cursor: pointer;
+}
+
+/* ending  */
+section .wrapper_el
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-block: 5pc;
+    align-items: center;
+    font-family: "suse", system-ui;
+}
+section .wrapper_el .box
+{
+    flex-basis: 50%;
+}
+section .wrapper_el .box h2
+{
+    text-align: center;
+    font-size: 1.5pc;
+    margin-inline: 1.5pc;
+    text-transform: capitalize;
+}
+section .wrapper_el .box #info
+{
+    margin-top: 1%;
+    font-weight: 450;
+    line-height: 1.3;
+    font-size: 1rem;
+    text-align: justify;
+    color: rgb(138, 131, 131);
+    transition: .3s ease-in-out;
+}
+section .wrapper_el .box .readmore
+{
+    cursor: pointer;
+    padding-inline: 2%;
+    margin-top: 1%;
+    font-weight: 450;
+    line-height: 1.3;
+    font-size: 1rem;
+    text-align: justify;
+    color: rgb(138, 131, 131);
+    transition: .3s ease-in-out;
+}
+section .wrapper_el .box .readmore h4
+{
+    cursor: default;
+    margin-inline: 3%;
+
+    margin-top: 1%;
+    font-weight: 450;
+    line-height: 1.3;
+    font-size: 1rem;
+    text-align: justify;
+    color: rgb(138, 131, 131);
+    transition: .3s ease-in-out;
+}
+section .wrapper_el .box .readmore summary
+{
+    color: #222121;
+    font-size: 1.3pc;
+    width: fit-content;
+    transition: .3s ease-in-out;
+    border-bottom: 2px solid #ffffff;
+
+    margin-top: 1%;
+    font-weight: 450;
+    line-height: 1.3;
+    font-size: 1rem;
+    text-align: justify;
+    color: rgb(138, 131, 131);
+    transition: .3s ease-in-out;
+}
+section .wrapper_el .box .readmore summary:hover
+{
+    width: fit-content;
+    border-bottom: 2px solid #191919;
+}
+#governor
+{
+    position: relative;
+}
+.governor_name
+{
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    color: white;
+    font-size: 1rem;
+    border-radius: .5pc;
+    text-align: center;
+    padding-block: .3pc;
+    background-color: hsla(0, 0%, 10%, .5);
+}
+section .wrapper_el .box img
+{
+    width: 100%;
+    height: 400px;
+    display: block;
+    object-fit: cover;
+}
+section .wrapper_el .box:last-child img
+{
+    order: -1;
+}
+.g_image
+{
+    border-radius: .5pc;
+    border: 2px solid wheat;
+}
+/* End section one element  */
+.service
+{
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-block: 5pc;
+    padding-inline: 1pc;
+    background-color: aliceblue;
+}
+.service .box
+{
+    flex-basis: 50%;
+}
+.service .box img
+{
+    width: 100%;
+    height: 25rem;
+    display: block;
+    border-radius: .7pc;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+.service .box h2
+{
+    padding: .7pc;
+    font-size: 1.5pc;
+    text-align: left;
+    color: #191919;
+    text-transform: capitalize;
+}
+.service .box p
+{
+    padding: .7pc;
+    font-size: 1pc;
+    text-align: left;
+    color: #191919;
+}
+.service .vfr-chart, .service.box
+{
+    flex-basis: 100%;
+}
+.service .vfr-chart
+{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 50%;
+}
+.service .vfr-chart .dnbk
+{
+    display: flex;
+    flex-direction: column;
+}
+.service .vfr-chart .dnbk label
+{
+    padding: .5rem;
+    color: white;
+    text-align: center;
+    background-color: #191919;
+}
+.service .vfr-chart .dnbk img
+{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+/* ending code  */
+.hotel
+{
+    height: 400px;
+    margin-block: 5pc;
+    padding: 2pc 1pc;
+    text-align: justify;
+}
+.hotel .img_float img
+{
+    float: right;
+    width: 50%;
+    height: 360px;
+    margin-left: 1pc;
+    border-radius: .5pc;
+    box-sizing: border-box;
+    object-fit: cover;
+}
+.hotel .text
+{
+    line-height: 1.2;
+}
+.hotel .text h4
+{
+    font-size: 1.5pc;
+    line-height: 1.2;
+    text-align: left;
+}
+.hotel .text h4 span
+{
+    font-size: 1.1pc;
+    text-align: center;
+    color: rgb(77, 74, 74);
+}
+.hotel .text p
+{
+    margin-top: 1%;
+    font-weight: 450;
+    line-height: 1.3;
+    font-size: 1rem;
+    text-align: justify;
+    color: rgb(138, 131, 131);
+    transition: .3s ease-in-out;
+}
+
+/* ending code  */
+.kerojet
+{
+    display: grid;
+    gap: .5pc;
+    padding:.7pc .4rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+.kerojet .box img
+{
+    width: 100%;
+    height: 100;
+    display: block;
+    border-radius: 1pc;
+    transition: .4s ease-in-out;
+}
+.kerojet .box img:hover
+{
+    cursor: pointer;
+    filter: drop-shadow(2px 2px 3px blue);
+}
+/* ending code  */
+.tower
+{
+    display: flex;
+    gap: 1pc;
+    align-items: center;
+    margin-block: 2pc;
+    padding:2pc 1pc;
+    font-family: "suse", system-ui;
+}
+.tower img
+{
+    width: 25%;
+    height: auto;
+    order: 2;
+    border-radius: .5pc;
+    filter: drop-shadow(1px 1px 3px);
+}
+.tower p span
+{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+.tower p
+{
+    width: 90%;
+    margin-top: 1%;
+    font-weight: 450;
+    line-height: 1.3;
+    font-size: 1rem;
+    text-align: justify;
+    color: rgb(138, 131, 131);
+    transition: .3s ease-in-out;
+}
+/* ending code  */
+.fireservice_office
+{
+    height: 40dvh;
+    display: flex;
+    column-gap: 2pc;
+    padding-inline: 1pc;
+    padding-block: 1pc 5rem;
+}
+.fireservice_office .fireservice_images_home
+{
+    flex-basis: 40%;
+    border-radius: 4%;
+}
+.fireservice_office figure img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.fireservice_office figcaption
+{
+    color: #191919;
+    font-size: 1.5rem;
+    text-align: left;
+    font-weight: bold;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+}
+.office
+{
+    flex-basis: 90%;
+    display: grid;
+    grid-template-columns: .6fr 1fr;
+    gap: 2pc;
+    padding: 1pc;
+    align-items: center;
+}
+.office img
+{
+    width: 100%;
+    height: 150px;
+    border-radius: 10%;
+    object-fit: cover;
+}
+.office ul
+{
+    font-size: 1.1rem;
+    list-style: decimal;
+    line-height: 1.9;
+    margin-left: 0;
+}
+/* ending code  */
+.location
+{
+    line-height: 2pc;
+    display: grid;
+    align-items: center;
+    padding-inline: 2pc 1pc;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: aliceblue;
+}
+.contactform
+{
+    border:none;
+}
+.contactform form
+{
+    padding: 1pc 2pc;
+}
+.contactform form label
+{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+.contactform form input
+{
+    width: 100%;
+    padding: .7pc;
+    outline: none;
+    font-size: 1.3pc;
+    border-radius: .4rem;
+    margin-bottom: .6rem;
+    border: 1px solid rgb(47, 53, 59);
+    font-family: 'Courier New', Courier, monospace;
+}
+.contactform form textarea
+{
+    width: 100%;
+    height: 10rem;
+    padding: .9pc;
+    resize: none;
+    outline: none;
+    font-size: 1.3pc;
+    border-radius: .4rem;
+    margin-bottom: .6rem;
+    border: 1px solid rgb(47, 53, 59);
+}
+.contactform form input[type="submit"]
+{
+    width: 50%;
+    border: none;
+    padding: .9pc;
+    color: #ffffff;
+    border-radius: .7rem;
+    transition: .3s ease-in-out;
+    text-transform: capitalize;
+    background-color: rgb(77, 88, 99);
+}
+.contactform form input[type="submit"]:hover
+{
+    cursor: pointer;
+    background-color: rgba(77, 88, 99, .5);
+}
+.location h2
+{
+    font-size: 1.5rem;
+    color: #5a5858;
+    margin-bottom: .3rem;
+    text-transform: capitalize;
+    transform: scaleY(1.5);
+}
+.location p
+{
+    color: #191919;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+.location a
+{
+    color: blue;
+    display: block;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+.location a:hover,
+.location a:hover
+{
+    color: darkblue;
+    text-decoration: underline;
+}
+.home
+{
+    position: fixed;
+    bottom: 3%;
+    left: 90%;
+    padding: 1pc;
+    z-index: 1;
+    font-size: 2pc;
+    color: #ffffff;
+    border-radius: 50%;
+    text-decoration: none;
+    transform: rotate(-2deg);
+    transition: .3s ease-in-out;
+    background-color: rgb(43, 31, 31);
+}
+.home:hover
+{
+    color: #ffffff;
+    background-color: rgb(77, 30, 30);
+    transform: rotate(-90deg);
+}
+/* ending contact form  */
+.about_page
+{
+    padding: 1.5pc 2pc;
+    margin-block: 2pc;
+}
+.about_page h6
+{
+    font-size: 1.5rem;
+}
+.about_page p
+{
+    width: 50%;
+    padding: 1rem 0;
+    line-height: 1.3;
+    font-size: 1.2rem;
+    text-align: justify;
+    color: rgb(138, 131, 131);
+    transition: .3s ease-in-out;
+}
+.about_page p:hover
+{
+    transform: translateY(-15px);
+}
+/* ending code  */
+footer
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+footer p
+{
+    font-size: 1.3rem;
+    color: #191919;
+    padding: 2pc;
+}
+.social_link
+{
+    padding-left: 10%;
+}
+.social_link i
+{
+    margin: .5pc;
+    padding: .7pc;
+    border-radius: 50%;
+    border: 2px solid steelblue;
+    font-size: clamp(1pc, 3vw, 1.5rem);
+}
+.social_link i:hover
+{
+    padding: .7pc;
+    color: orange;
+    cursor: pointer;
+    border: 2px solid peru;
+}
+.social_link .ri-arrow-left-up-line
+{
+    position: absolute;
+    right: 3%;
+    transition: .3s ease-in-out;
+    transform: translateY(-300px);
+    transform: rotate(-45deg);
+}
+.social_link .ri-arrow-left-up-line:hover
+{
+    background-color: aliceblue;
+    transform: rotate(45deg);
+}
+/* ENDING DESKTOP STYLE */

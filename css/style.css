@@ -1,0 +1,848 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=SUSE:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mingzat&display=swap');
+
+
+
+
+
+
+*
+{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Roboto", system-ui;
+    font-family: "suse", system-ui;
+}
+body
+{
+    overflow-x: hidden;
+}
+
+/* media query  */
+@media screen and (max-width: 767.99px) {
+    body 
+    {
+        width: 100dvw;
+        height: 100dvh;
+    }
+    #open
+    {
+        padding: .4pc;
+        font-size: 2pc;
+        cursor: pointer;
+        color: whitesmoke;
+        border-radius: 4pc;
+        background-color: lightblue;
+        border: 2px solid transparent;
+
+        display: block;
+    }
+    #open:hover
+    {
+        cursor: pointer;
+        color: #ffffff;
+        border: 2px solid wheat;
+        background-color: rgb(50, 66, 71);
+    }
+        .menu
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: .3s ease-in-out;
+        padding: 2pc 2pc;
+        box-shadow: 2px 5px 16px rgb(212, 211, 209);  
+    }
+    .menu:hover
+    {
+        box-shadow: 2px 10px 20px rgb(212, 211, 209);
+    }
+    .menu .logo
+    {
+        height: 100%;
+        padding: .7pc;
+        font-size: .7rem;
+        border-radius: 1pc;
+        color: #191919;
+        text-transform: uppercase;
+        border-bottom: 2px double skyblue;
+    }
+    .menu ul
+    {
+        cursor: pointer;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        background-color: peru;
+        width: 300px;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100%;
+        z-index: 1;
+        padding-top: 2.9pc;
+        transition: .3s ease-in-out;
+    }
+    .menu ul span
+    {
+        font-size: 1.3pc;
+        position: absolute;
+        top: 0;
+        padding: .5pc;
+        width: 100%;
+        color: white;
+        text-align: center;
+        background-color: rgb(114, 26, 26);
+        display: block;
+    }
+    .menu ul span:hover
+    {
+        color: red;
+        font-size: 1.5pc;
+
+        position: absolute;
+        top: 0;
+        padding: .5pc;
+        width: 100%;
+        color: white;
+        text-align: center;
+        background-color: red;
+    }
+    .menu ul li
+    {
+        font-size: .1pc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: #191919;
+        display: inline-block;
+        padding: 1pc;
+    }
+    .menu ul li:hover
+    {
+        color: white;
+        background-color: #5a5858;
+    }
+    .menu ul li a:any-link
+    {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        font-size: 1rem;
+        margin-top: 0;
+        color: wheat;
+        text-decoration: none;
+        text-transform: capitalize;
+        display: inline-block;
+    }
+    .menu ul li a:any-link::after
+    {
+        content: "";
+        width: 0%;
+        height: 3px;
+        margin: auto;
+        display: none;
+        transition: .3s ease-in-out;
+    }
+    .menu ul li a:hover::after
+    {
+        width: 100%;
+        display: none;
+        background-color: gray;
+    }
+    /* end menu style  */
+    main
+    {
+        height: 100vh;
+        background-image:linear-gradient(to bottom, hsla(180, 100%, 50%, .3), hsla(182, 98%, 51%, 0.1)), url("../images/kebbi-bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+        object-position: top;
+        position: relative;
+        padding-bottom: 2pc;
+    }
+    #datetime
+    {
+        color: #191919;
+        position: fixed;
+        right: 0;
+        top: 20%;
+        font-size: 1rem;
+        padding: .3pc .9pc;
+        border-radius: 1rem 0 0 1rem;
+        background-color: aliceblue;
+        z-index: 3;
+    }
+    main h1
+    {
+        color: #191919;
+        font-size: clamp(1pc, 3vh, 1.5pc);
+        text-align: center;
+        text-transform: capitalize;
+    }
+    main h1 .shadow
+    {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: .4s ease-in-out;
+        background-color: transparent;
+    }
+    main h1 .shadow:hover
+    {
+        cursor: pointer;
+        background-color: hsla(180, 42%, 53%, 0.2);
+    }
+    main h1 .shadow h2
+    {
+        width: 100%;
+        height: 100%;
+        font-size: 1.7pc;
+        color: rgb(47, 53, 59);
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        opacity: .7;
+        transform: translateX(-50%);
+        transition: .3s ease-in-out;
+    }
+    main h1 .shadow:hover h2
+    {
+        top: 25%;
+        opacity: 1;
+        color: white;
+        text-shadow: 2px 2px 10px blue;
+    }
+    main h1 .shadow h2 b
+    {
+        white-space: nowrap;
+    }
+    /* ending table  */
+    table
+    {
+        color: rgb(12, 8, 8);
+        width: 100%;
+        font-size: 1pc;
+
+        position: absolute;
+        right: 0%;
+        top: 47%;
+        border-radius: 1pc;
+        background-color: rgb(198, 202, 206);
+    }
+    table .middle
+    {
+        text-align: center;
+    }
+    table #mddle
+    {
+        padding: .2pc;
+        text-align: center;
+        transition: .3s ease-in-out;
+    }
+    table #mddle:hover
+    {
+        cursor: pointer;
+        background-color: hsla(0, 0%, 100%, 0.3);
+    }
+    table th
+    {
+        padding: .5pc;
+        text-align: left;
+    }
+    table td
+    {
+        border: none;
+        text-align: left;
+        padding-left: 0pc;
+        padding-bottom: 0pc;
+    }
+    .iata, .icad
+    {
+        cursor: pointer;
+        font-size: .8pc;
+        padding: 0rem;
+        font-weight: 500;
+        text-align: justify;
+    }
+    .icad
+    {
+        padding: 0rem;
+    }
+    .iata summary, .icad summary
+    {
+        color: #fff;
+        padding: .3rem .5rem;
+        border-radius: .2rem;
+        background-color: #191919;
+    }
+    .iata:hover, .icad:hover
+    {
+        color: rgb(27, 27, 87);
+        cursor: pointer;
+    }
+
+    /* ending  */
+
+    section .wrapper_el
+    {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2pc;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2.5pc;
+        padding-inline: 0pc;
+    }
+    section .wrapper_el .box
+    {
+        flex-basis: 100%;
+    }
+    .wrapper_el .box  #info .capitalize
+    {
+        text-transform: capitalize;
+    }
+    .wrapper_el .box  [data="meta"]
+    {
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+    section .wrapper_el .box h2
+    {
+        width: 100%;
+        margin: 0pc;
+        padding-inline: 0pc;
+        color: #191919;
+        font-size: 1.2pc;
+        text-align: center;
+        text-transform: capitalize;
+    }
+    section .wrapper_el .box #info
+    {
+        padding: .7pc;
+        font-weight: 450;
+        line-height: 1.3;
+        font-size: 1rem;
+        text-align: justify;
+        color: rgb(138, 131, 131);
+        transition: .3s ease-in-out;
+    }
+    section .wrapper_el .box .readmore
+    {
+        cursor: pointer;
+        padding-inline: 2%;
+        margin-top: 1%;
+        font-weight: 450;
+        line-height: 1.3;
+        font-size: 1rem;
+        text-align: justify;
+        color: rgb(138, 131, 131);
+        transition: .3s ease-in-out;
+    }
+    section .wrapper_el .box .readmore h4
+    {
+        cursor: default;
+        margin-inline: 3%;
+
+        margin-top: 1%;
+        font-weight: 450;
+        line-height: 1.3;
+        font-size: 1rem;
+        text-align: justify;
+        color: rgb(138, 131, 131);
+        transition: .3s ease-in-out;
+    }
+    section .wrapper_el .box .readmore summary
+    {
+        color: #222121;
+        font-size: 1.3pc;
+        width: fit-content;
+        transition: .3s ease-in-out;
+        border-bottom: 2px solid #ffffff;
+
+        margin-top: 1%;
+        font-weight: 450;
+        line-height: 1.3;
+        font-size: 1rem;
+        text-align: justify;
+        color: rgb(138, 131, 131);
+        transition: .3s ease-in-out;
+    }
+    section .wrapper_el .box .readmore summary:hover
+    {
+        width: fit-content;
+        border-bottom: 2px solid #191919;
+    }
+    section .wrapper_el .box img
+    {
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 0 0 .3pc .3pc;
+        transition: .3s ease-in-out;
+        box-shadow: 3px 2px 4px black;
+    }
+
+    section .wrapper_el .box img:hover
+    {
+        width: 100%;
+        height: 100%;
+        display: block;
+        box-shadow: 4px 4px 5px black;
+    }
+    section .wrapper_el .box:last-child img
+    {
+        order: -1;
+    }
+    .g_image
+    {
+        border-radius: .5pc;
+        border: 2px solid wheat;
+    }
+    #governor
+    {
+        width: 100%;
+        position: relative;
+    }
+    .governor_name
+    {
+        position: absolute;
+        bottom: 0;
+
+        width: 100%;
+        color: white;
+        font-size: .8rem;
+        border-radius: .5pc;
+        text-align: center;
+        padding-block: .3pc;
+        background-color: hsla(0, 0%, 10%, .5);
+    }
+
+    /* End section one element  */
+    .service
+    {
+        display: grid;
+        align-content: center;
+        row-gap: 2pc;
+        height: fit-content;
+        grid-auto-flow: row;
+        margin-block: 2pc;
+        padding-inline: .8pc;
+        padding-bottom: 0pc;
+    }
+    .service .box:first-child
+    {
+        order: 1;
+    }
+    .service .box img
+    {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    .service .box h2
+    {
+        padding: .7pc;
+        font-size: 1.5pc;
+        text-align: center;
+        text-transform: capitalize;
+        color: #191919;
+    }
+    .service .box p
+    {
+        padding: .7pc;
+        font-size: 1pc;
+        line-height: 1.4;
+        text-align: center;
+        text-transform: capitalize;
+        color: #191919;
+    }
+    .service img 
+    {
+        border-radius: .3pc;
+        transition: .3s ease-in-out;
+        box-shadow: 3px 2px 4px black;
+    }
+    .service img:hover
+    {
+        box-shadow: 4px 4px 5px black;
+    }
+    section .wrapper_el .box img:hover
+    {
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: .3pc;
+        box-shadow: 3px 3px 4px black;
+    }
+    .service .vfr-chart, .service.box
+    {
+        flex-basis: 100%;
+    }
+    .service .vfr-chart
+    {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        flex-basis: 50%;
+    }
+    .service .vfr-chart .dnbk
+    {
+        display: flex;
+        width: 150px;
+        flex-direction: column;
+    }
+    .service .vfr-chart .dnbk label
+    {
+        width: 100%;
+        padding: .5rem;
+        color: white;
+        text-align: center;
+        background-color: #191919;
+    }
+    .service .vfr-chart .dnbk img
+    {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    /* ending code  */
+    .hotel
+    {
+
+        height: auto;
+        text-align: justify;
+        margin-block: 5pc 0;
+        padding-inline: 1pc;
+        
+        display: flex;
+        gap: 3pc;
+        flex-direction: column;
+    }
+    .img_float img
+    {
+        float: center;
+        width: 100%;
+        height: 350px;
+        border-radius: .5pc;
+        object-fit: cover;
+    }
+    .text
+    {
+        line-height: 1.2;
+    }
+    .text h4
+    {
+        font-size: 1.2pc;
+        line-height: 1;
+        text-align: center;
+    }
+    .text h4 span
+    {
+        font-size: .9pc;
+        text-align: center;
+        color: rgb(77, 74, 74);
+    }
+    .text p
+    {
+        margin-top: 2%;
+        font-weight: 450;
+        line-height: 1.3;
+        font-size: 1rem;
+        text-align: justify;
+        color: rgb(138, 131, 131);
+        transition: .3s ease-in-out;
+    }
+    /* ending code  */
+    .kerojet
+    {
+        display: grid;
+        gap: .5pc;
+        padding:.7pc .4rem;
+        grid-template-columns:  1fr;
+        margin-block:0 5pc;
+        padding: 2pc 1pc;
+    }
+    .kerojet .box img
+    {
+        width: 100%;
+        height: 100;
+        display: block;
+        border-radius: 1pc;
+        transition: .4s ease-in-out;
+    }
+    .kerojet .box img:hover
+    {
+        cursor: pointer;
+        filter: drop-shadow(2px 2px 3px blue);
+    }
+    /* ending code  */
+    .tower
+    {
+        display: flex;
+        gap: 1pc;
+        align-items: center;
+        flex-direction: column-reverse;
+        margin-block: 0 2pc;
+        padding-inline: 1pc;
+    }
+    .tower img
+    {
+        width: 100%;
+        height: auto;
+        margin-inline: 10%;
+        order: 2;
+        border-radius: .5pc;
+    }
+    .tower p
+    {
+        font-weight: 450;
+        line-height: 1.3;
+        font-size: 1rem;
+        text-align: justify;
+        color: rgb(138, 131, 131);
+        transition: .3s ease-in-out;
+    }
+    .tower p span
+    {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: rgb(25, 25, 25);
+    }
+    /* ending code  */
+    .fireservice_office
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 1pc;
+        margin: 1.5pc;
+        height: max-content;
+    }
+    .fireservice_office figcaption
+    {
+        padding: 0;
+        display: block;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: black;
+        text-transform: capitalize;
+    }
+    .fireservice_office .fireservice_images_home
+    {
+        width: 100%;
+        height: 30dvh;
+        object-fit: cover;
+    }
+    .office
+    {
+        flex-basis: 100%;
+        display: grid;
+        grid-template-columns: .3fr 1fr;
+        gap: 1pc;
+        padding: 1pc 0pc;
+        align-items: start;  
+    }
+    .office img
+    {
+        width: 100%;
+        height: 120px;
+        border-radius: 10%;
+        object-fit: cover;
+    }
+    .office ul
+    {
+        font-size: .9rem;
+        list-style: decimal;
+        line-height: 1.5;
+        margin: 10px;
+        color: rgb(68, 67, 66);
+    }
+
+    /* ending tower code  */
+    .location
+    {
+        line-height: 2pc;
+        display: grid;
+        align-items: center;
+        padding: 2pc 1pc;
+        margin: 1rem;
+        border-radius: .4rem;
+        background-color: aliceblue;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+    .location h2
+    {
+        font-size: 1.5rem;
+        color: black;
+        margin-bottom: 0;
+        text-transform: capitalize;
+        transform: scaleY(0.9);
+    }
+    .location p
+    {
+        font-size: 1rem;
+        color: #191919;
+        text-transform: capitalize;
+    }
+    .location a
+    {
+        display: block;
+        font-size: 1.1rem;
+        text-decoration: none;
+        color: rgb(25, 25, 177);
+    }
+    .location a:hover,
+    .location a:hover
+    {
+        color: darkblue;
+        text-decoration: underline;
+    }
+    .contactform
+    {
+        border:none;
+    }
+    .contactform form
+    {
+        padding: 1pc 0pc;
+    }
+    .contactform form label
+    {
+        font-size: 1rem;
+        text-transform: capitalize;
+    }
+    .contactform form input
+    {
+        width: 100%;
+        padding: .5pc;
+        outline: none;
+        font-size: 1pc;
+        border-radius: .4rem;
+        margin-bottom: .6rem;
+        border: 1px solid rgb(161, 199, 236);
+    }
+    .contactform form textarea
+    {
+        width: 100%;
+        height: 10rem;
+        padding: .9pc;
+        resize: none;
+        outline: none;
+        font-size: 1.3pc;
+        border-radius: .4rem;
+        margin-bottom: .6rem;
+        border: 1px solid rgb(47, 53, 59);
+    }
+    .contactform form input[type="submit"]
+    {
+        width: 100%;
+        border: none;
+        padding: .6pc;
+        font-size: 1rem;
+        color: #ffffff;
+        border-radius: .3rem;
+        transition: .3s ease-in-out;
+        text-transform: capitalize;
+        background-color: rgb(77, 88, 99);
+    }
+    .contactform form input[type="submit"]:hover
+    {
+        cursor: pointer;
+        background-color: rgba(77, 88, 99, .5);
+    }
+    /* ending contact form  */
+    .about_page
+    {
+        padding: 1.5pc 1.5pc;
+        margin-block: 2pc;
+        transition: .3s ease-in-out;
+    }
+    .about_page:hover
+    {
+        cursor: pointer;
+        box-shadow: 2px 2px 3px rgb(95, 95, 167);
+    }
+    .about_page h6
+    {
+        font-size: 1.5rem;
+    }
+    .about_page p
+    {
+        width: 100%;
+        padding: 1rem 0;
+        line-height: 1.3;
+        font-size: 1rem;
+        text-align: justify;
+        color: rgb(138, 131, 131);
+        transition: .3s ease-in-out;
+    }
+    .about_page p:hover
+    {
+        transform: translateY(-10px);
+    }
+    /* ending code  */
+    footer
+    {
+        display: flex;
+        padding: 2pc;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+    }
+    footer p
+    {
+        font-size: 1.3rem;
+        color: #191919;
+    }
+    .social_link
+    {
+        padding-left: 0;
+        display: flex;
+    }
+    .social_link a
+    {
+        text-decoration: none;
+    }
+    .social_link i
+    {
+        margin: .5pc;
+        padding: .7pc;
+        border-radius: 50%;
+        border: 2px solid steelblue;
+        font-size: clamp(1pc, 3vw, 1.5rem);
+    }
+    .social_link i:hover
+    {
+        color: orange;
+        cursor: pointer;
+        border: 2px solid peru;
+    }
+    .social_link .ri-arrow-left-up-line
+    {
+        position: absolute;
+        right: 3%;
+        color: white;
+        transition: .3s ease-in-out;
+        transform: translateY(400px);
+        transform: rotate(-45deg);
+        background-color: #5a5858;
+    }
+    .social_link .ri-arrow-left-up-line:hover
+    {
+        color: wheat;
+        transform: rotate(45deg);
+        background-color: #5a5858;
+    }
+}
